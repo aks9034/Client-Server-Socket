@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 public class Client {
 
-	public static void main(String[] args) throws UnknownHostException, IOException {
-		
+	public static void main(String[] args) throws UnknownHostException, IOException 
+	{	
 		String ipAddress = "localhost";
 		int portNumber = 9000;
 			
@@ -24,9 +24,11 @@ public class Client {
 		
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 		out.println(fileName);
-		while(true) {
+		while(true) 
+		{
 			BufferedReader bReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			if(bReader.ready()) {
+			if(bReader.ready()) 
+			{
 				System.out.println(bReader.readLine());
 			}
 		}
